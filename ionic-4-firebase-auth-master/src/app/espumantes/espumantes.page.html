@@ -1,0 +1,69 @@
+
+  
+<ion-content fullscreen>
+
+  <ion-card>
+    <ion-card-header>
+
+      <ion-card-title  style="color:white !important ; font-size: 18px">Espumantes</ion-card-title>
+    
+
+</ion-card-header>
+</ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="8">
+        <span class="slider-nav arrow-prev"
+          (click)="slidePrev(sliderOne,slideWithNav)">
+          <div class="prev-icon-custom custon-nav"
+            [class.disabled]="sliderOne.isBeginningSlide"></div>
+        </span>
+      </ion-col>
+      <ion-col size="16">
+
+        <ion-slides pager="true" [options]="slideOptsOne" #slideWithNav
+          (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
+          <ion-slide *ngFor="let s of sliderOne.slidesItems">
+            <img src="../../assets/img/menu/chan/{{s.id}}.jpg">
+          </ion-slide>
+        </ion-slides>
+
+      </ion-col>
+      <ion-col size="8">
+        <span class="slider-nav arrow-next"
+          (click)="slideNext(sliderOne,slideWithNav)">
+          <div class="next-icon-custom custon-nav"
+            [class.disabled]="sliderOne.isEndSlide"></div>
+        </span>
+      </ion-col>
+    </ion-row>
+  </ion-grid> 
+  <ion-card>
+    <ion-card-header>
+
+      <ion-card-subtitle  style="color:white !important ; font-size: 16px">Espumantes</ion-card-subtitle>
+   
+    </ion-card-header>
+  <ion-list>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="../../assets/img/menu/chan/1.jpg" />
+      </ion-avatar>
+      <ion-label style="color:white !important;">
+        <h2 style="color:white !important;">Chandon 187</h2>
+        <p> Clásicos con Sabor</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+
+      <ion-avatar slot="start">
+        <img src="../../assets/img/menu/chan/1.jpg" />
+      </ion-avatar>
+      <ion-label style="color:white !important;">
+        <h2 style="color:white !important;">Chandon Premium</h2>
+        <p>Mojito</p>
+      </ion-label>
+    </ion-item>  
+  </ion-list> 
+</ion-card>
+</ion-content>

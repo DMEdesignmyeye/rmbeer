@@ -1,0 +1,77 @@
+
+<ion-app>
+  <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start" style="color:white !important">
+        <ion-menu-button (click)="openFirst()"></ion-menu-button>
+        </ion-buttons>  <ion-title text-center  style="background-color: black; color:white !important; font-weight: bold;"><ion-icon name="arrow-round-back"></ion-icon>
+         Menú   <ion-icon name="arrow-round-forward"></ion-icon>
+          </ion-title>
+        <ion-buttons slot="end" style="color:white !important">
+        <ion-menu-button (click)="openEnd()"></ion-menu-button>
+        </ion-buttons> 
+     
+    </ion-toolbar>
+    </ion-header>
+    <ion-menu side="start" menuId="first">
+
+  <ion-header>
+    <ion-toolbar color="danger">
+        <ion-title style="color:white">Comidas</ion-title>
+      </ion-toolbar>
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()" style="color:white" placeholder="Buscar"></ion-searchbar>
+      
+  </ion-header>
+  <ion-content> 
+
+    <ion-item *ngFor="let data of jsonData" style="color: white !important" [routerLink]="data.url" routerDirection="forward" (click)="goTo()">
+        {{data.name}}
+    </ion-item>
+  </ion-content>
+</ion-menu>
+ 
+<ion-menu side="end" menuId="end">
+
+  <ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>Bebidas</ion-title>
+      </ion-toolbar>
+  <ion-searchbar [(ngModel)]="searchTerm2" (ionInput)="setFilteredItems2()"  placeholder="Buscar"></ion-searchbar>
+      
+  </ion-header>
+  <ion-content> 
+
+    <ion-item *ngFor="let data of jsonData2" style="color: white !important"  [routerLink]="data.url" routerDirection="forward" (click)="goTo2()">
+        {{data.name}}
+    </ion-item>
+  </ion-content>
+</ion-menu>
+ 
+
+
+
+  <ion-router-outlet main><ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home">
+        <ion-icon name="home"></ion-icon>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="agenda">
+          <ion-icon name="calendar"></ion-icon>
+        </ion-tab-button>
+    
+      <ion-tab-button tab="gallery">
+          <ion-icon name="images"></ion-icon>
+        </ion-tab-button>
+    
+      <ion-tab-button tab="qrscann"> 
+        <ion-icon name="qr-scanner"></ion-icon>
+      </ion-tab-button>
+   
+  
+      <ion-tab-button tab="login">
+        <ion-icon name="person"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs> </ion-router-outlet>
+</ion-app>

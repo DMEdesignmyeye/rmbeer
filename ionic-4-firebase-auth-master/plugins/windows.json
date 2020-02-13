@@ -1,0 +1,45 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-actionsheet": {
+      "PACKAGE_NAME": "MyApp"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "MyApp"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "MyApp"
+    },
+    "cordova-plugin-email-composer": {
+      "PACKAGE_NAME": "MyApp"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "MyApp"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "MyApp"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "MyApp"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "MyApp"
+    },
+    "mx.ferreyra.callnumber": {
+      "PACKAGE_NAME": "MyApp"
+    },
+    "phonegap-plugin-barcodescanner": {
+      "PACKAGE_NAME": "MyApp"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "MyApp"
+    }
+  },
+  "dependent_plugins": {}
+}

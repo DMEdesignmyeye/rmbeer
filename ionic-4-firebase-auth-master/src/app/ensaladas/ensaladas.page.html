@@ -1,0 +1,40 @@
+
+  <ion-content fullscreen>
+       
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle style="color:white !important">Entradas</ion-card-subtitle>
+      </ion-card-header>
+      <img src="../../assets/img/menu/entradas.jpg" />
+      <ion-card-content style="color:white !important;">        <ion-card-title style="color:white !important; font-weight:bold">Ensaladas</ion-card-title>
+
+        Las Ensaladas son nuestra especialidad.</ion-card-content>
+  <ion-list>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="../../assets/img/menu/entradas.jpg"/>
+      </ion-avatar>
+      <ion-label style="color:white !important;">
+        <h2 style="color:white !important;">Ensalada Capresse</h2>
+       </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="../../assets/img/menu/entradas.jpg"/>
+      </ion-avatar>
+      <ion-label style="color:white !important;">
+        <h2 style="color:white !important;">Ensalada Caesar</h2>
+       </ion-label>
+    </ion-item>
+    <ion-item (click)="showAlert()">
+      <ion-avatar slot="start">
+        <img src="../../assets/img/menu/entradas.jpg"/>
+      </ion-avatar>
+      <ion-label>
+        <h2 style="color:white !important;">Ensalada Rock Me Beer</h2>
+        <p>Tomates cherry, huevo, arveja y queso.</p>
+      </ion-label>
+    </ion-item>  
+  </ion-list>    
+</ion-card>
+</ion-content>

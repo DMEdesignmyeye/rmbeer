@@ -1,0 +1,59 @@
+
+    <ion-content fullscreen> 
+         
+    <ion-card-header> 
+       
+        <h1 style="color:white !important; font-weight: bold ; margin-bottom:-1%; margin-top:13%;" text-center margin-vertical>Bienvenido a</h1>
+
+      <img src="../../assets/img/rmblogo.png" style="height: auto; margin-bottom:-8px;"/>   
+         
+       
+      </ion-card-header>
+     
+    <!-- <iframe width="100%" height="680" src="http://www.rockmebeer.com"></iframe> -->
+   
+     
+         
+      
+     <ion-grid>
+      <ion-row>
+        <ion-col size="1">
+          <span class="slider-nav arrow-prev"
+            (click)="slidePrev(sliderOne,slideWithNav)">
+            <div class="prev-icon-custom custon-nav"
+              [class.disabled]="sliderOne.isBeginningSlide"></div>
+          </span>
+        </ion-col>
+        <ion-col size="10">
+  
+          <ion-slides pager="true" [options]="slideOptsOne" #slideWithNav
+            (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
+            <ion-slide *ngFor="let s of sliderOne.slidesItems">
+              <img src="../../assets/img/{{s.id}}.jpg">
+            </ion-slide>
+          </ion-slides>
+  
+        </ion-col>
+        <ion-col size="1">
+          <span class="slider-nav arrow-next"
+            (click)="slideNext(sliderOne,slideWithNav)">
+            <div class="next-icon-custom custon-nav"
+              [class.disabled]="sliderOne.isEndSlide"></div>
+          </span>
+        </ion-col>
+      </ion-row>
+    </ion-grid> 
+     <ion-fab vertical="bottom" color="light" horizontal="start" slot="fixed">
+       <ion-fab-button color="dark" >
+         <ion-icon color="light" name="arrow-dropup"></ion-icon>
+       </ion-fab-button>
+       <ion-fab-list side="top">
+          <ion-fab-button href="https://www.facebook.com/rockmebeer" color="light"><ion-icon name="logo-google"></ion-icon></ion-fab-button>
+          <ion-fab-button href="https://www.facebook.com/rockmebeer" color="light"><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
+          <ion-fab-button href="https://www.instagram.com/rockmebeer" color="light"><ion-icon name="logo-instagram"></ion-icon></ion-fab-button> 
+          <ion-fab-button href="https://www.facebook.com/rockmebeer" color="light"><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+        </ion-fab-list> 
+     </ion-fab>
+    </ion-content>  
+
+
